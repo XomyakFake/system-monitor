@@ -1,0 +1,3 @@
+/home/anton/system-monitor/build/CMakeFiles/system_monitor.dir
+/home/anton/system-monitor/build/CMakeFiles/edit_cache.dir
+/home/anton/system-monitor/build/CMakeFiles/rebuild_cache.dir
