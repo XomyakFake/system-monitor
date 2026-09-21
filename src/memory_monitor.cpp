@@ -45,14 +45,14 @@ MemoryUsage MemoryMonitor::read() const {
         const auto values = parseMemInfo();
 
         const auto totalIt = values.find("MemTotal");
+        const auto availableIt = values.find("MemAvailable");
+
+        if (totalIt == values.end() || availableIt == values.end()) {
+            throw std::runtime_error("Cannot find MemTotal or MemAvailable");
+        }
 
         const std::uint64_t totalKb = totalIt->second;
-
-        std::uint64_t availableKb = 0;
-        const auto availableIt = values.find("MemAvailable");
-        if (totalIt == values.end() || availableIt == values.end()) {
-            throw std::runtime_error("Cannot find (MemTotal / MemAvailable) in /proc/meminfo");
-        }
+        const std::uint64_t availableKb = availableIt->second;
         const std::uint64_t usedKb = totalKb - availableKb;
 
         MemoryUsage usage{};
