@@ -225,6 +225,30 @@ src/network_monitor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/system_monitor.dir/build.make CMakeFiles/system_monitor.dir/src/network_monitor.cpp.s
 .PHONY : src/network_monitor.cpp.s
 
+src/process_monitor.o: src/process_monitor.cpp.o
+.PHONY : src/process_monitor.o
+
+# target to build an object file
+src/process_monitor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/system_monitor.dir/build.make CMakeFiles/system_monitor.dir/src/process_monitor.cpp.o
+.PHONY : src/process_monitor.cpp.o
+
+src/process_monitor.i: src/process_monitor.cpp.i
+.PHONY : src/process_monitor.i
+
+# target to preprocess a source file
+src/process_monitor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/system_monitor.dir/build.make CMakeFiles/system_monitor.dir/src/process_monitor.cpp.i
+.PHONY : src/process_monitor.cpp.i
+
+src/process_monitor.s: src/process_monitor.cpp.s
+.PHONY : src/process_monitor.s
+
+# target to generate assembly for a file
+src/process_monitor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/system_monitor.dir/build.make CMakeFiles/system_monitor.dir/src/process_monitor.cpp.s
+.PHONY : src/process_monitor.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -246,6 +270,9 @@ help:
 	@echo "... src/network_monitor.o"
 	@echo "... src/network_monitor.i"
 	@echo "... src/network_monitor.s"
+	@echo "... src/process_monitor.o"
+	@echo "... src/process_monitor.i"
+	@echo "... src/process_monitor.s"
 .PHONY : help
 
 

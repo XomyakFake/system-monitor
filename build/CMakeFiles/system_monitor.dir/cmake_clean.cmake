@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/system_monitor.dir/src/memory_monitor.cpp.o.d"
   "CMakeFiles/system_monitor.dir/src/network_monitor.cpp.o"
   "CMakeFiles/system_monitor.dir/src/network_monitor.cpp.o.d"
+  "CMakeFiles/system_monitor.dir/src/process_monitor.cpp.o"
+  "CMakeFiles/system_monitor.dir/src/process_monitor.cpp.o.d"
   "system_monitor"
   "system_monitor.pdb"
 )
