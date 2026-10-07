@@ -129,6 +129,32 @@ system_monitor/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/system_monitor.dir/build.make CMakeFiles/system_monitor.dir/build
 .PHONY : system_monitor/fast
 
+#=============================================================================
+# Target rules for targets named system_monitor_autogen_timestamp_deps
+
+# Build rule for target.
+system_monitor_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 system_monitor_autogen_timestamp_deps
+.PHONY : system_monitor_autogen_timestamp_deps
+
+# fast build rule for target.
+system_monitor_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/system_monitor_autogen_timestamp_deps.dir/build.make CMakeFiles/system_monitor_autogen_timestamp_deps.dir/build
+.PHONY : system_monitor_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named system_monitor_autogen
+
+# Build rule for target.
+system_monitor_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 system_monitor_autogen
+.PHONY : system_monitor_autogen
+
+# fast build rule for target.
+system_monitor_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/system_monitor_autogen.dir/build.make CMakeFiles/system_monitor_autogen.dir/build
+.PHONY : system_monitor_autogen/fast
+
 src/cpu_monitor.o: src/cpu_monitor.cpp.o
 .PHONY : src/cpu_monitor.o
 
@@ -176,6 +202,30 @@ src/main.s: src/main.cpp.s
 src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/system_monitor.dir/build.make CMakeFiles/system_monitor.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
+
+src/main_window.o: src/main_window.cpp.o
+.PHONY : src/main_window.o
+
+# target to build an object file
+src/main_window.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/system_monitor.dir/build.make CMakeFiles/system_monitor.dir/src/main_window.cpp.o
+.PHONY : src/main_window.cpp.o
+
+src/main_window.i: src/main_window.cpp.i
+.PHONY : src/main_window.i
+
+# target to preprocess a source file
+src/main_window.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/system_monitor.dir/build.make CMakeFiles/system_monitor.dir/src/main_window.cpp.i
+.PHONY : src/main_window.cpp.i
+
+src/main_window.s: src/main_window.cpp.s
+.PHONY : src/main_window.s
+
+# target to generate assembly for a file
+src/main_window.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/system_monitor.dir/build.make CMakeFiles/system_monitor.dir/src/main_window.cpp.s
+.PHONY : src/main_window.cpp.s
 
 src/memory_monitor.o: src/memory_monitor.cpp.o
 .PHONY : src/memory_monitor.o
@@ -249,6 +299,54 @@ src/process_monitor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/system_monitor.dir/build.make CMakeFiles/system_monitor.dir/src/process_monitor.cpp.s
 .PHONY : src/process_monitor.cpp.s
 
+src/system_monitor.o: src/system_monitor.cpp.o
+.PHONY : src/system_monitor.o
+
+# target to build an object file
+src/system_monitor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/system_monitor.dir/build.make CMakeFiles/system_monitor.dir/src/system_monitor.cpp.o
+.PHONY : src/system_monitor.cpp.o
+
+src/system_monitor.i: src/system_monitor.cpp.i
+.PHONY : src/system_monitor.i
+
+# target to preprocess a source file
+src/system_monitor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/system_monitor.dir/build.make CMakeFiles/system_monitor.dir/src/system_monitor.cpp.i
+.PHONY : src/system_monitor.cpp.i
+
+src/system_monitor.s: src/system_monitor.cpp.s
+.PHONY : src/system_monitor.s
+
+# target to generate assembly for a file
+src/system_monitor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/system_monitor.dir/build.make CMakeFiles/system_monitor.dir/src/system_monitor.cpp.s
+.PHONY : src/system_monitor.cpp.s
+
+system_monitor_autogen/mocs_compilation.o: system_monitor_autogen/mocs_compilation.cpp.o
+.PHONY : system_monitor_autogen/mocs_compilation.o
+
+# target to build an object file
+system_monitor_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/system_monitor.dir/build.make CMakeFiles/system_monitor.dir/system_monitor_autogen/mocs_compilation.cpp.o
+.PHONY : system_monitor_autogen/mocs_compilation.cpp.o
+
+system_monitor_autogen/mocs_compilation.i: system_monitor_autogen/mocs_compilation.cpp.i
+.PHONY : system_monitor_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+system_monitor_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/system_monitor.dir/build.make CMakeFiles/system_monitor.dir/system_monitor_autogen/mocs_compilation.cpp.i
+.PHONY : system_monitor_autogen/mocs_compilation.cpp.i
+
+system_monitor_autogen/mocs_compilation.s: system_monitor_autogen/mocs_compilation.cpp.s
+.PHONY : system_monitor_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+system_monitor_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/system_monitor.dir/build.make CMakeFiles/system_monitor.dir/system_monitor_autogen/mocs_compilation.cpp.s
+.PHONY : system_monitor_autogen/mocs_compilation.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -257,6 +355,8 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... system_monitor_autogen"
+	@echo "... system_monitor_autogen_timestamp_deps"
 	@echo "... system_monitor"
 	@echo "... src/cpu_monitor.o"
 	@echo "... src/cpu_monitor.i"
@@ -264,6 +364,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/main_window.o"
+	@echo "... src/main_window.i"
+	@echo "... src/main_window.s"
 	@echo "... src/memory_monitor.o"
 	@echo "... src/memory_monitor.i"
 	@echo "... src/memory_monitor.s"
@@ -273,6 +376,12 @@ help:
 	@echo "... src/process_monitor.o"
 	@echo "... src/process_monitor.i"
 	@echo "... src/process_monitor.s"
+	@echo "... src/system_monitor.o"
+	@echo "... src/system_monitor.i"
+	@echo "... src/system_monitor.s"
+	@echo "... system_monitor_autogen/mocs_compilation.o"
+	@echo "... system_monitor_autogen/mocs_compilation.i"
+	@echo "... system_monitor_autogen/mocs_compilation.s"
 .PHONY : help
 
 

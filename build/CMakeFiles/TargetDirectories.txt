@@ -1,3 +1,5 @@
 /home/anton/system-monitor/build/CMakeFiles/system_monitor.dir
 /home/anton/system-monitor/build/CMakeFiles/edit_cache.dir
 /home/anton/system-monitor/build/CMakeFiles/rebuild_cache.dir
+/home/anton/system-monitor/build/CMakeFiles/system_monitor_autogen_timestamp_deps.dir
+/home/anton/system-monitor/build/CMakeFiles/system_monitor_autogen.dir

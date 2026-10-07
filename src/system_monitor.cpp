@@ -1,63 +1,58 @@
-#include "system_snapshot.hpp"
+#include "system_monitor.hpp"
 
-#include <atomic>
-#include <chrono>
-#include <mutex>
-#include <thread>
+#include <utility>
 
-class SystemMonitor{
-    public:
-        explicit SystemMonitor(std::chrono::milliseconds interval = std::chrono::milliseconds(500)) : Interval(interval), Running(false) {}
+SystemMonitor::SystemMonitor(std::chrono::milliseconds interval)
+    : interval_(interval) {}
 
-        void start(){
-            if(Running){
-                return;
-            }
-            Running = true;
-            worker = std::thread(&SystemMonitor::run, this);
-        }
-        void stop(){
-            Running = false;
-            if(worker.joinable()){
-                worker.join();
-            }
-        }
+SystemMonitor::~SystemMonitor() {
+    stop();
+}
 
-        SystemSnapshot snapshot(){
-            std::lock_guard<std::mutex> lock(mutex);
-        return last_snapshot_;
+void SystemMonitor::start() {
+    if (running_.exchange(true)) {
+        return;
     }
-    private:
-        std::chrono::milliseconds Interval;
-        std::atomic<bool> Running;
-        std::thread worker;
-        SystemSnapshot last_snapshot_{};
-        mutable std::mutex mutex;
-        std::chrono::milliseconds interval;
 
-        void run(){
-            while(Running){
-                SystemSnapshot next = collect();
-                {
-                std::lock_guard<std::mutex> lock(mutex);
-                last_snapshot_ = next;
-                }
+    worker_ = std::thread(&SystemMonitor::run, this);
+}
 
-                std::this_thread::sleep_for(interval);
-            }
+void SystemMonitor::stop() {
+    running_ = false;
+    stop_condition_.notify_all();
+
+    if (worker_.joinable()) {
+        worker_.join();
+    }
+}
+
+SystemSnapshot SystemMonitor::snapshot() const {
+    std::lock_guard<std::mutex> lock(mutex_);
+    return last_snapshot_;
+}
+
+void SystemMonitor::run() {
+    while (running_) {
+        SystemSnapshot next = collect();
+        {
+            std::lock_guard<std::mutex> lock(mutex_);
+            last_snapshot_ = std::move(next);
         }
-        SystemSnapshot collect() const {
-            SystemSnapshot snap{};
-            CpuMonitor cpu;
-            MemoryMonitor memory;
-            NetworkMonitor network;
-            ProcessMonitor processes;
-        
-            snap.cpu = cpu.read();
-            snap.memory = memory.read();
-            snap.network = network.measureRate();
-            snap.processes = processes.getTopProcess();
 
-            return snap;
-        }
-};
+        std::unique_lock<std::mutex> lock(mutex_);
+        stop_condition_.wait_for(lock, interval_, [this] {
+            return !running_;
+        });
+    }
+}
+
+SystemSnapshot SystemMonitor::collect() {
+    SystemSnapshot snapshot{};
+    snapshot.cpu = cpu_monitor_.read();
+    snapshot.cpu_usage_percent = cpu_monitor_.usagePercent(interval_);
+    snapshot.memory = memory_monitor_.read();
+    snapshot.network = network_monitor_.measureRate(interval_);
+    snapshot.processes = process_monitor_.getTopProcess(10, interval_);
+    snapshot.valid = true;
+    return snapshot;
+}

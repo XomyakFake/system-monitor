@@ -9,7 +9,9 @@
 
 struct SystemSnapshot{
     CpuSample cpu{};
+    double cpu_usage_percent = 0.0;
     MemoryUsage memory{};
     NetworkMonitor::NetworkRate network{};
     std::vector<ProcessInfo> processes;
+    bool valid = false;
 };

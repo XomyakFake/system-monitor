@@ -8,11 +8,15 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "" "system_monitor_autogen/timestamp" "custom" "system_monitor_autogen/deps"
   "/home/anton/system-monitor/src/cpu_monitor.cpp" "CMakeFiles/system_monitor.dir/src/cpu_monitor.cpp.o" "gcc" "CMakeFiles/system_monitor.dir/src/cpu_monitor.cpp.o.d"
   "/home/anton/system-monitor/src/main.cpp" "CMakeFiles/system_monitor.dir/src/main.cpp.o" "gcc" "CMakeFiles/system_monitor.dir/src/main.cpp.o.d"
+  "/home/anton/system-monitor/src/main_window.cpp" "CMakeFiles/system_monitor.dir/src/main_window.cpp.o" "gcc" "CMakeFiles/system_monitor.dir/src/main_window.cpp.o.d"
   "/home/anton/system-monitor/src/memory_monitor.cpp" "CMakeFiles/system_monitor.dir/src/memory_monitor.cpp.o" "gcc" "CMakeFiles/system_monitor.dir/src/memory_monitor.cpp.o.d"
   "/home/anton/system-monitor/src/network_monitor.cpp" "CMakeFiles/system_monitor.dir/src/network_monitor.cpp.o" "gcc" "CMakeFiles/system_monitor.dir/src/network_monitor.cpp.o.d"
   "/home/anton/system-monitor/src/process_monitor.cpp" "CMakeFiles/system_monitor.dir/src/process_monitor.cpp.o" "gcc" "CMakeFiles/system_monitor.dir/src/process_monitor.cpp.o.d"
+  "/home/anton/system-monitor/src/system_monitor.cpp" "CMakeFiles/system_monitor.dir/src/system_monitor.cpp.o" "gcc" "CMakeFiles/system_monitor.dir/src/system_monitor.cpp.o.d"
+  "/home/anton/system-monitor/build/system_monitor_autogen/mocs_compilation.cpp" "CMakeFiles/system_monitor.dir/system_monitor_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/system_monitor.dir/system_monitor_autogen/mocs_compilation.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

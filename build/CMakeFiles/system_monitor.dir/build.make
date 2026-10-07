@@ -69,10 +69,31 @@ include CMakeFiles/system_monitor.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/system_monitor.dir/flags.make
 
+system_monitor_autogen/timestamp: /usr/lib/qt6/libexec/moc
+system_monitor_autogen/timestamp: /usr/lib/qt6/libexec/uic
+system_monitor_autogen/timestamp: CMakeFiles/system_monitor.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/anton/system-monitor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target system_monitor"
+	/usr/bin/cmake -E cmake_autogen /home/anton/system-monitor/build/CMakeFiles/system_monitor_autogen.dir/AutogenInfo.json ""
+	/usr/bin/cmake -E touch /home/anton/system-monitor/build/system_monitor_autogen/timestamp
+
+CMakeFiles/system_monitor.dir/system_monitor_autogen/mocs_compilation.cpp.o: CMakeFiles/system_monitor.dir/flags.make
+CMakeFiles/system_monitor.dir/system_monitor_autogen/mocs_compilation.cpp.o: system_monitor_autogen/mocs_compilation.cpp
+CMakeFiles/system_monitor.dir/system_monitor_autogen/mocs_compilation.cpp.o: CMakeFiles/system_monitor.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/anton/system-monitor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/system_monitor.dir/system_monitor_autogen/mocs_compilation.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/system_monitor.dir/system_monitor_autogen/mocs_compilation.cpp.o -MF CMakeFiles/system_monitor.dir/system_monitor_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/system_monitor.dir/system_monitor_autogen/mocs_compilation.cpp.o -c /home/anton/system-monitor/build/system_monitor_autogen/mocs_compilation.cpp
+
+CMakeFiles/system_monitor.dir/system_monitor_autogen/mocs_compilation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/system_monitor.dir/system_monitor_autogen/mocs_compilation.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anton/system-monitor/build/system_monitor_autogen/mocs_compilation.cpp > CMakeFiles/system_monitor.dir/system_monitor_autogen/mocs_compilation.cpp.i
+
+CMakeFiles/system_monitor.dir/system_monitor_autogen/mocs_compilation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/system_monitor.dir/system_monitor_autogen/mocs_compilation.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anton/system-monitor/build/system_monitor_autogen/mocs_compilation.cpp -o CMakeFiles/system_monitor.dir/system_monitor_autogen/mocs_compilation.cpp.s
+
 CMakeFiles/system_monitor.dir/src/main.cpp.o: CMakeFiles/system_monitor.dir/flags.make
 CMakeFiles/system_monitor.dir/src/main.cpp.o: /home/anton/system-monitor/src/main.cpp
 CMakeFiles/system_monitor.dir/src/main.cpp.o: CMakeFiles/system_monitor.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/anton/system-monitor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/system_monitor.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/anton/system-monitor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/system_monitor.dir/src/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/system_monitor.dir/src/main.cpp.o -MF CMakeFiles/system_monitor.dir/src/main.cpp.o.d -o CMakeFiles/system_monitor.dir/src/main.cpp.o -c /home/anton/system-monitor/src/main.cpp
 
 CMakeFiles/system_monitor.dir/src/main.cpp.i: cmake_force
@@ -83,10 +104,38 @@ CMakeFiles/system_monitor.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/system_monitor.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anton/system-monitor/src/main.cpp -o CMakeFiles/system_monitor.dir/src/main.cpp.s
 
+CMakeFiles/system_monitor.dir/src/main_window.cpp.o: CMakeFiles/system_monitor.dir/flags.make
+CMakeFiles/system_monitor.dir/src/main_window.cpp.o: /home/anton/system-monitor/src/main_window.cpp
+CMakeFiles/system_monitor.dir/src/main_window.cpp.o: CMakeFiles/system_monitor.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/anton/system-monitor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/system_monitor.dir/src/main_window.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/system_monitor.dir/src/main_window.cpp.o -MF CMakeFiles/system_monitor.dir/src/main_window.cpp.o.d -o CMakeFiles/system_monitor.dir/src/main_window.cpp.o -c /home/anton/system-monitor/src/main_window.cpp
+
+CMakeFiles/system_monitor.dir/src/main_window.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/system_monitor.dir/src/main_window.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anton/system-monitor/src/main_window.cpp > CMakeFiles/system_monitor.dir/src/main_window.cpp.i
+
+CMakeFiles/system_monitor.dir/src/main_window.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/system_monitor.dir/src/main_window.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anton/system-monitor/src/main_window.cpp -o CMakeFiles/system_monitor.dir/src/main_window.cpp.s
+
+CMakeFiles/system_monitor.dir/src/system_monitor.cpp.o: CMakeFiles/system_monitor.dir/flags.make
+CMakeFiles/system_monitor.dir/src/system_monitor.cpp.o: /home/anton/system-monitor/src/system_monitor.cpp
+CMakeFiles/system_monitor.dir/src/system_monitor.cpp.o: CMakeFiles/system_monitor.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/anton/system-monitor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/system_monitor.dir/src/system_monitor.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/system_monitor.dir/src/system_monitor.cpp.o -MF CMakeFiles/system_monitor.dir/src/system_monitor.cpp.o.d -o CMakeFiles/system_monitor.dir/src/system_monitor.cpp.o -c /home/anton/system-monitor/src/system_monitor.cpp
+
+CMakeFiles/system_monitor.dir/src/system_monitor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/system_monitor.dir/src/system_monitor.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anton/system-monitor/src/system_monitor.cpp > CMakeFiles/system_monitor.dir/src/system_monitor.cpp.i
+
+CMakeFiles/system_monitor.dir/src/system_monitor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/system_monitor.dir/src/system_monitor.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anton/system-monitor/src/system_monitor.cpp -o CMakeFiles/system_monitor.dir/src/system_monitor.cpp.s
+
 CMakeFiles/system_monitor.dir/src/cpu_monitor.cpp.o: CMakeFiles/system_monitor.dir/flags.make
 CMakeFiles/system_monitor.dir/src/cpu_monitor.cpp.o: /home/anton/system-monitor/src/cpu_monitor.cpp
 CMakeFiles/system_monitor.dir/src/cpu_monitor.cpp.o: CMakeFiles/system_monitor.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/anton/system-monitor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/system_monitor.dir/src/cpu_monitor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/anton/system-monitor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/system_monitor.dir/src/cpu_monitor.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/system_monitor.dir/src/cpu_monitor.cpp.o -MF CMakeFiles/system_monitor.dir/src/cpu_monitor.cpp.o.d -o CMakeFiles/system_monitor.dir/src/cpu_monitor.cpp.o -c /home/anton/system-monitor/src/cpu_monitor.cpp
 
 CMakeFiles/system_monitor.dir/src/cpu_monitor.cpp.i: cmake_force
@@ -100,7 +149,7 @@ CMakeFiles/system_monitor.dir/src/cpu_monitor.cpp.s: cmake_force
 CMakeFiles/system_monitor.dir/src/memory_monitor.cpp.o: CMakeFiles/system_monitor.dir/flags.make
 CMakeFiles/system_monitor.dir/src/memory_monitor.cpp.o: /home/anton/system-monitor/src/memory_monitor.cpp
 CMakeFiles/system_monitor.dir/src/memory_monitor.cpp.o: CMakeFiles/system_monitor.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/anton/system-monitor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/system_monitor.dir/src/memory_monitor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/anton/system-monitor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/system_monitor.dir/src/memory_monitor.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/system_monitor.dir/src/memory_monitor.cpp.o -MF CMakeFiles/system_monitor.dir/src/memory_monitor.cpp.o.d -o CMakeFiles/system_monitor.dir/src/memory_monitor.cpp.o -c /home/anton/system-monitor/src/memory_monitor.cpp
 
 CMakeFiles/system_monitor.dir/src/memory_monitor.cpp.i: cmake_force
@@ -114,7 +163,7 @@ CMakeFiles/system_monitor.dir/src/memory_monitor.cpp.s: cmake_force
 CMakeFiles/system_monitor.dir/src/network_monitor.cpp.o: CMakeFiles/system_monitor.dir/flags.make
 CMakeFiles/system_monitor.dir/src/network_monitor.cpp.o: /home/anton/system-monitor/src/network_monitor.cpp
 CMakeFiles/system_monitor.dir/src/network_monitor.cpp.o: CMakeFiles/system_monitor.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/anton/system-monitor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/system_monitor.dir/src/network_monitor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/anton/system-monitor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/system_monitor.dir/src/network_monitor.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/system_monitor.dir/src/network_monitor.cpp.o -MF CMakeFiles/system_monitor.dir/src/network_monitor.cpp.o.d -o CMakeFiles/system_monitor.dir/src/network_monitor.cpp.o -c /home/anton/system-monitor/src/network_monitor.cpp
 
 CMakeFiles/system_monitor.dir/src/network_monitor.cpp.i: cmake_force
@@ -128,7 +177,7 @@ CMakeFiles/system_monitor.dir/src/network_monitor.cpp.s: cmake_force
 CMakeFiles/system_monitor.dir/src/process_monitor.cpp.o: CMakeFiles/system_monitor.dir/flags.make
 CMakeFiles/system_monitor.dir/src/process_monitor.cpp.o: /home/anton/system-monitor/src/process_monitor.cpp
 CMakeFiles/system_monitor.dir/src/process_monitor.cpp.o: CMakeFiles/system_monitor.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/anton/system-monitor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/system_monitor.dir/src/process_monitor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/anton/system-monitor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/system_monitor.dir/src/process_monitor.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/system_monitor.dir/src/process_monitor.cpp.o -MF CMakeFiles/system_monitor.dir/src/process_monitor.cpp.o.d -o CMakeFiles/system_monitor.dir/src/process_monitor.cpp.o -c /home/anton/system-monitor/src/process_monitor.cpp
 
 CMakeFiles/system_monitor.dir/src/process_monitor.cpp.i: cmake_force
@@ -141,7 +190,10 @@ CMakeFiles/system_monitor.dir/src/process_monitor.cpp.s: cmake_force
 
 # Object files for target system_monitor
 system_monitor_OBJECTS = \
+"CMakeFiles/system_monitor.dir/system_monitor_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/system_monitor.dir/src/main.cpp.o" \
+"CMakeFiles/system_monitor.dir/src/main_window.cpp.o" \
+"CMakeFiles/system_monitor.dir/src/system_monitor.cpp.o" \
 "CMakeFiles/system_monitor.dir/src/cpu_monitor.cpp.o" \
 "CMakeFiles/system_monitor.dir/src/memory_monitor.cpp.o" \
 "CMakeFiles/system_monitor.dir/src/network_monitor.cpp.o" \
@@ -150,14 +202,22 @@ system_monitor_OBJECTS = \
 # External object files for target system_monitor
 system_monitor_EXTERNAL_OBJECTS =
 
+system_monitor: CMakeFiles/system_monitor.dir/system_monitor_autogen/mocs_compilation.cpp.o
 system_monitor: CMakeFiles/system_monitor.dir/src/main.cpp.o
+system_monitor: CMakeFiles/system_monitor.dir/src/main_window.cpp.o
+system_monitor: CMakeFiles/system_monitor.dir/src/system_monitor.cpp.o
 system_monitor: CMakeFiles/system_monitor.dir/src/cpu_monitor.cpp.o
 system_monitor: CMakeFiles/system_monitor.dir/src/memory_monitor.cpp.o
 system_monitor: CMakeFiles/system_monitor.dir/src/network_monitor.cpp.o
 system_monitor: CMakeFiles/system_monitor.dir/src/process_monitor.cpp.o
 system_monitor: CMakeFiles/system_monitor.dir/build.make
+system_monitor: /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2
+system_monitor: /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.4.2
+system_monitor: /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2
+system_monitor: /usr/lib/x86_64-linux-gnu/libGLX.so
+system_monitor: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 system_monitor: CMakeFiles/system_monitor.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/anton/system-monitor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable system_monitor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/anton/system-monitor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable system_monitor"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/system_monitor.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -168,7 +228,7 @@ CMakeFiles/system_monitor.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/system_monitor.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/system_monitor.dir/clean
 
-CMakeFiles/system_monitor.dir/depend:
+CMakeFiles/system_monitor.dir/depend: system_monitor_autogen/timestamp
 	cd /home/anton/system-monitor/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/anton/system-monitor /home/anton/system-monitor /home/anton/system-monitor/build /home/anton/system-monitor/build /home/anton/system-monitor/build/CMakeFiles/system_monitor.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/system_monitor.dir/depend
 
