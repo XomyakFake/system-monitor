@@ -2,7 +2,7 @@
 
 A Linux desktop system monitor written in C++17 with Qt 6. It shows CPU, memory and network usage, a live list of the most active processes, and history charts.
 
-![Screenshot](docs/imagine.png)
+![Screenshot](docs/image.png)
 
 ## Features
 
