@@ -95,12 +95,13 @@ bool readProcessCpu(const std::filesystem::path& processPath, PrevCpuTimes& cpu)
         fields.push_back(value);
     }
 
-    if (fields.size() < 2) {
+
+    if (fields.size() < 13) {
         return false;
     }
 
-    cpu.utime = fields[0];
-    cpu.stime = fields[1];
+    cpu.utime = fields[11];
+    cpu.stime = fields[12];
     return true;
 }
 

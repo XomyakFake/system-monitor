@@ -26,4 +26,4 @@ add_executable(system_monitor
     include/system_snapshot.hpp
 )
 
-target_link_libraries(system_monitor PRIVATE Qt6::Widgets QT6:Charts)
+target_link_libraries(system_monitor PRIVATE Qt6::Widgets Qt6::Charts)
